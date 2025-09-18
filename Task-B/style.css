@@ -1,0 +1,36 @@
+body {
+    background-color: blueviolet;
+}
+
+p{
+    color: cadetblue;
+ 
+}
+
+h1, h2, h3 {
+  color: #003366;
+  font-size: 2em; /* or whatever size is needed */
+}
+
+p {
+  color: #333333;
+}
+
+ul {
+  list-style-type: square;
+  color: #555;
+}
+
+ol {
+  list-style-type: upper-roman;
+  color: #555;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
