@@ -1,55 +1,37 @@
-/*
-Author: Jaakko Flink
-Date: 2025-10-02
-*/
-h1 {
-    color: darkblue;
-    text-align: center;
-}
+/* Author: Jaakko Flink */
+/* Date: 2025-09-11 */
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* ID selector */
-#special-message {
-    color: crimson;
-    font-weight: bold;
-    background-color: #f8d7da;
-    padding: 5px;
-}
-
-/* Class selectors */
-.box {
-    border: 2px solid steelblue;
-    padding: 10px;
-    margin: 5px 0;
-}
-
-.highlight {
-    background-color: yellow;
-    font-style: italic;
-}
-
-/* Group selectors */
-h1, h2, h3 {
+/* Yleiset tyylit */
+body {
     font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Descendant selectors */
-section ul li {
-    color: green;
-    margin-left: 20px;
+/* Otsikko */
+h1 {
+    margin-bottom: 30px;
 }
 
-/* Attribute selectors */
-a[target="_blank"] {
-    color: purple;
-    text-decoration: underline;
+/* Kuvien tyylit */
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto; /* Keskitys ja väli alas */
 }
 
-img[alt] {
-    border: 2px dashed gray;
-    max-width: 200px;
+/* Ääni- ja videotiedostot */
+audio, video {
+    display: block;
+    margin: 0 auto 30px auto; /* Keskitetty ja väli alas */
+}
+
+/* Osioiden väli ja tekstin muotoilu */
+section {
+    margin-top: 40px;
+    line-height: 1.6;
 }
