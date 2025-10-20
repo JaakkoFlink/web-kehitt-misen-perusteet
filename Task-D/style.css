@@ -1,7 +1,7 @@
 /* Author: Jaakko Flink */
 /* Date: 2025-09-11 */
 
-/* Yleiset tyylit */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -10,28 +10,66 @@ body {
     padding: 20px;
 }
 
-/* Otsikko */
+
 h1 {
     margin-bottom: 30px;
 }
 
-/* Kuvien tyylit */
 img {
     width: 100%;
     max-width: 500px;
     height: auto;
     display: block;
-    margin: 0 auto 30px auto; /* Keskitys ja väli alas */
+    margin: 0 auto 30px auto; 
 }
 
-/* Ääni- ja videotiedostot */
+
 audio, video {
     display: block;
-    margin: 0 auto 30px auto; /* Keskitetty ja väli alas */
+    margin: 0 auto 30px auto; 
 }
 
-/* Osioiden väli ja tekstin muotoilu */
+
 section {
     margin-top: 40px;
     line-height: 1.6;
+}
+
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+
+.box {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+
+#special-message {
+  color: red;
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+}
+
+
+section ul li {
+  list-style-type: square;
+}
+
+a[target] {
+  color: green;
+  text-decoration: underline;
+}
+
+img[alt] {
+  border: 2px dashed blue;
 }
