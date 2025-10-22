@@ -86,7 +86,7 @@ body {
 
 /* Table */
 .table {
-  width: 100%;                           /* % */
+  width: 85%;                           /* % */
   border-collapse: collapse;
   font-size: 1rem;                       /* rem */
 }
