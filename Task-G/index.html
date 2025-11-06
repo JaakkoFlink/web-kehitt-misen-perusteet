@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!--
+    Author: Jaakko Flink
+    Date 2025-11-6
+  -->
+
+  <header class="site-header">
+    <h1>Registration Page</h1>
+  </header>
+
+  <main class="content">
+
+    <section class="controls" aria-label="Add person">
+      <h2>Fill your information</h2>
+
+      <form id="registrationForm" novalidate>
+
+        <!-- Timestamp (hidden) -->
+        <input type="hidden" id="timestamp" name="timestamp" value="">
+
+        <div class="form-row">
+          <label for="fullname">Full name *</label>
+          <input id="fullname" name="fullname" type="text" placeholder="First Last">
+          <div class="error" id="err-fullname"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" placeholder="example@mail.com">
+          <div class="error" id="err-email"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone *</label>
+          <input id="phone" name="phone" type="tel" placeholder="+358401234567">
+          <div class="error" id="err-phone"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="birthdate">Birthdate *</label>
+          <input id="birthdate" name="birthdate" type="date">
+          <div class="error" id="err-birthdate"></div>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="terms" name="terms">
+          I accept the terms *
+        </label>
+        <div class="error" id="err-terms"></div>
+
+        <div class="form-row">
+          <button id="addRowBtn" type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <div class="table-wrap">
+      <h2>Registrations</h2>
+      <table class="table" id="registrationTable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Birthdate</th>
+            <th>Terms</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </main>
+
+</body>
+</html>
