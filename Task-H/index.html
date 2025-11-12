@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ilmoittautumislomake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent: '#f97316',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-slate-100 text-slate-800 font-sans min-h-screen flex flex-col">
+  <!--
+    Author: Jaakko Flink
+    Date: 2025-11-06
+  -->
+
+ 
+  <header class="bg-primary text-white text-center py-6 shadow-lg">
+    <h1 class="text-3xl font-bold">Registration Page</h1>
+  </header>
+
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <section class="bg-white shadow-md rounded-xl p-6 max-w-2xl mx-auto mb-10">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Fill your information</h2>
+
+      <form id="registrationForm" novalidate class="space-y-5">
+        <input type="hidden" id="timestamp" name="timestamp" value="" />
+
+        <div>
+          <label for="fullname" class="block font-medium mb-1">Full name *</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="First Last"
+            class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-primary focus:outline-none"
+          />
+          <p class="text-red-500 text-sm mt-1 hidden" id="err-fullname"></p>
+        </div>
+
+        <div>
+          <label for="email" class="block font-medium mb-1">Email *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="example@mail.com"
+            class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-primary focus:outline-none"
+          />
+          <p class="text-red-500 text-sm mt-1 hidden" id="err-email"></p>
+        </div>
+
+        <div>
+          <label for="phone" class="block font-medium mb-1">Phone *</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="+358401234567"
+            class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-primary focus:outline-none"
+          />
+          <p class="text-red-500 text-sm mt-1 hidden" id="err-phone"></p>
+        </div>
+
+        
+        <div>
+          <label for="birthdate" class="block font-medium mb-1">Birthdate *</label>
+          <input
+            id="birthdate"
+            name="birthdate"
+            type="date"
+            class="w-full border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-primary focus:outline-none"
+          />
+          <p class="text-red-500 text-sm mt-1 hidden" id="err-birthdate"></p>
+        </div>
+
+       
+        <div class="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            class="w-4 h-4 text-primary border-slate-300 focus:ring-primary"
+          />
+          <label for="terms" class="text-sm">I accept the terms *</label>
+        </div>
+        <p class="text-red-500 text-sm mt-1 hidden" id="err-terms"></p>
+
+        
+        <div class="text-center">
+          <button
+            id="addRowBtn"
+            type="submit"
+            class="bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <div class="bg-white shadow-md rounded-xl p-6 max-w-4xl mx-auto overflow-x-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Registrations</h2>
+      <table class="w-full border border-slate-300 rounded-lg text-sm md:text-base">
+        <thead class="bg-slate-200">
+          <tr>
+            <th class="py-2 px-3 border border-slate-300">Timestamp</th>
+            <th class="py-2 px-3 border border-slate-300">Name</th>
+            <th class="py-2 px-3 border border-slate-300">Email</th>
+            <th class="py-2 px-3 border border-slate-300">Phone</th>
+            <th class="py-2 px-3 border border-slate-300">Birthdate</th>
+            <th class="py-2 px-3 border border-slate-300">Terms</th>
+          </tr>
+        </thead>
+        <tbody id="registrationTable" class="text-center"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="text-center text-slate-500 py-4 mt-auto">
+    © 2025 Jaakko Flink
+  </footer>
+</body>
+</html>
