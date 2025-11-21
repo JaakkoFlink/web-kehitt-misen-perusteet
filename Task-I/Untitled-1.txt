@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaskakaara Oy - Autovuokraamo</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HERO SECTION -->
+  <header class="relative h-screen bg-cover bg-center" 
+    style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80');">
+    
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
+      <h1 class="text-5xl font-extrabold mb-4">Jaskakaara Ja VAUNU Oy</h1>
+      <p class="text-xl mb-6">Luotettavat ja laadukkaat vuokra-autot Ja VAUNUT arkeen ja seikkailuihin</p>
+      <a href="#cars" class="px-6 py-3 bg-red-500 hover:bg-red-600 rounded-md text-lg font-semibold transition">
+        Tutustu autoihin
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-16">
+
+    
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold mb-4">Tietoa meistä</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Jaskakaara ja VAUNU Oy tarjoaa siistejä, huollettuja ja luotettavia ajoneuvoja ja VAUNUJA kaikkiin tarpeisiin.
+        Valikoimamme kattaa pienet kaupunkiautot, sähköautot, tila-autot sekä vapaa-ajan menopelit.
+        Meille tärkeintä on asiakastyytyväisyys, edulliset hinnat ja nopea palvelu.
+      </p>
+    </section>
+
+    
+    <section id="cars" class="mb-20">
+      <h2 class="text-3xl font-bold mb-8">Suositut autot</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        
+        <article class="bg-white rounded-lg shadow hover:shadow-xl transition p-5">
+          <img src="Toyota_690_8_202011313948.jpg"
+            alt="Toyota Corolla" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-1">Toyota Hilux</h3>
+          <p class="text-gray-600">Joka miehen lavaauto suoraan japaninmaalta</p>
+        </article>
+
+        <article class="bg-white rounded-lg shadow hover:shadow-xl transition p-5">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+            alt="Chevrolet Camaro Z1" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-1">Chevrolet Camaro Z1</h3>
+          <p class="text-gray-600">Syö Diiselliä ja kiihtyy vauhtiin</p>
+        </article>
+
+        <article class="bg-white rounded-lg shadow hover:shadow-xl transition p-5">
+          <img src="Ford-E350-4x4-Camper-Van-1600x899.webp"
+            alt="Ford E-350" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-1">Ford E-350</h3>
+          <p class="text-gray-600">Tilava ja tehokas — sopii ryhmille ja kuljetuksiin.</p>
+        </article>
+
+           <article class="bg-white rounded-lg shadow hover:shadow-xl transition p-5">
+          <img src="tanke.jpg"
+            alt="Ford E-350" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-1">PVKV III</h3>
+          <p class="text-gray-600">Tässä sulle vuokra vaunu joka kääntää katseita.</p>
+        </article>
+
+      </div>
+    </section>
+
+    
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold mb-6">Miksi valita Jaskakaara Ja VAUNU Oy?</h2>
+
+      <ul class="space-y-3 text-lg">
+        <li>✔ Edulliset vuorokausi- ja viikkohinnat</li>
+        <li>✔ Kaikki autot tarkistetaan ennen jokaista vuokrausta</li>
+        <li>✔ Nopea nouto ja toimitus mahdollisuus</li>
+        <li>✔ Ystävällinen asiakaspalvelu</li>
+      </ul>
+    </section>
+
+
+    <section class="text-center bg-red-100 py-16 rounded-xl shadow mb-20">
+      <h2 class="text-3xl font-bold mb-4">Autoa vailla mutta kukkaro ei ole valmis</h2>
+      <p class="text-lg mb-6">Jaskan kaarasta saat mitä tilaat kukkaron tilavuudesta riippumatta.</p>
+      <a href="#"
+        class="px-8 py-3 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition font-semibold text-lg">
+        Katso koko valikoima ja ihastu
+      </a>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p>© 2025 Jaskakaara Oy | info@jaskakaara.fi</p>
+  </footer>
+
+</body>
+
+</html>
