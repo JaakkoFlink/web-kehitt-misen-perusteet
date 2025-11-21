@@ -1,4 +1,3 @@
-// index.js
 // Author: Jaakko Flink
 // Date: 2025-11-06
 
@@ -20,6 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const errBirthdate = document.getElementById("err-birthdate");
   const errTerms = document.getElementById("err-terms");
 
+  // --- NEW: INFO BOX ELEMENTS ---
+  const infoName = document.querySelector(".student-info .student-name");
+  const infoEmail = document.querySelectorAll(".student-info .student-group")[0];
+  const infoPhone = document.querySelectorAll(".student-info .student-name")[1];
+  const infoBirth = document.querySelectorAll(".student-info .student-group")[1];
+
   function clearErrors() {
     errFullname.textContent = "";
     errEmail.textContent = "";
@@ -38,21 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
       valid = false;
     }
 
-    
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email.value.trim())) {
       errEmail.textContent = "Invalid email format.";
       valid = false;
     }
 
-    
     const phonePattern = /^\+358\d{7,11}$/;
     if (!phonePattern.test(phone.value.trim())) {
       errPhone.textContent = "Phone must be in +358XXXXXXXXX format.";
       valid = false;
     }
 
-  
     const today = new Date();
     const birth = new Date(birthdate.value);
 
@@ -76,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
- 
     if (!terms.checked) {
       errTerms.textContent = "You must accept the terms.";
       valid = false;
@@ -85,12 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
     return valid;
   }
 
+  // --- NEW: UPDATE INFO BOX ---
+  function updateInfoBox() {
+    infoName.textContent = fullname.value;
+    infoEmail.textContent = email.value;
+    infoPhone.textContent = phone.value;
+    infoBirth.textContent = birthdate.value;
+  }
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!validate()) return;
 
     timestampInput.value = new Date().toLocaleString("fi-FI");
 
+    // Update info box
+    updateInfoBox();
+
+    // Add row to table
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${timestampInput.value}</td>
